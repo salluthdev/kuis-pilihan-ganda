@@ -4,23 +4,34 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Kuis Pilihan Ganda</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
-	<h1 id="question"></h1>
+	<div id="opening_window">
+		<h1>Selamat datang!</h1>
+		<button onclick="startQuiz()">Mulai kuis</button>
+	</div>
+	<div id="quiz_window" class="hidden">
+		<h1 id="question"></h1>
 
-	<input type="radio" name="choices" data-id="0" id="choice-0">
-	<label for="choice-0" id="choiceText-0"></label>
+		<input type="radio" name="choices" data-id="0" id="choice-0">
+		<label for="choice-0" id="choiceText-0"></label>
 
-	<input type="radio" name="choices" data-id="1" id="choice-1">
-	<label for="choice-1" id="choiceText-1"></label>
+		<input type="radio" name="choices" data-id="1" id="choice-1">
+		<label for="choice-1" id="choiceText-1"></label>
 
-	<input type="radio" name="choices" data-id="2" id="choice-2">
-	<label for="choice-2" id="choiceText-2"></label>
+		<input type="radio" name="choices" data-id="2" id="choice-2">
+		<label for="choice-2" id="choiceText-2"></label>
 
-	<input type="radio" name="choices" data-id="3" id="choice-3">
-	<label for="choice-3" id="choiceText-3"></label>
+		<input type="radio" name="choices" data-id="3" id="choice-3">
+		<label for="choice-3" id="choiceText-3"></label>
 
-	<button>Next</button>
+		<button onclick="nextQuestion()">Next</button>
+	</div>
+	<div id="closing_window" class="hidden">
+		<h1>Quiz Selesai</h1>
+		<h2 id="scoreText"></h2>
+	</div>
 
 	<script type="text/javascript" src="assets/js/script.js"></script>
 </body>
